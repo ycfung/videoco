@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="707.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Controller.ManageMovieController">
+   <children>
+      <HBox prefHeight="80.0" prefWidth="1280.0">
+         <children>
+            <Button fx:id="mainMenuBtn" mnemonicParsing="false" onAction="#backToMainMenu" text="Main Menu">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="25.0" />
+               </HBox.margin>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mange Movies">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="360.0" top="20.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox prefHeight="522.0" prefWidth="1280.0">
+         <children>
+            <TableView fx:id="movieTableView" prefHeight="482.0" prefWidth="867.0">
+               <columns>
+                  <TableColumn fx:id="colMid" prefWidth="65.60003662109375" text="Movie ID" />
+                  <TableColumn fx:id="colTitle" prefWidth="158.39996337890625" text="Title" />
+                  <TableColumn fx:id="colGenre" text="Genre" />
+                  <TableColumn fx:id="colDirector" prefWidth="99.2000732421875" text="Director" />
+                  <TableColumn fx:id="colActor" prefWidth="179.199951171875" text="Actors" />
+                  <TableColumn fx:id="colQuantity" prefWidth="64.0" text="Quantity" />
+                  <TableColumn fx:id="colDate" prefWidth="56.0" text="Date" />
+                  <TableColumn fx:id="colPrice" prefWidth="72.7999267578125" text="Price" />
+               </columns>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </TableView>
+            <VBox prefHeight="522.0" prefWidth="213.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Title" />
+                        <TextField fx:id="titleTextField" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Director" />
+                        <TextField fx:id="directorTextField" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Quantity" />
+                        <TextField fx:id="quantityTextField" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Price" />
+                        <TextField fx:id="priceTextField" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="522.0" prefWidth="210.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Genre" />
+                        <TextField fx:id="genreTextField" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Actors" />
+                        <TextField fx:id="actorTextField" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Date" />
+                        <TextField fx:id="dateTextField" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#add" text="Add Movie">
+                     <VBox.margin>
+                        <Insets top="35.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

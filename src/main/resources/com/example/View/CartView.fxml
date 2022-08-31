@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Controller.CartController">
+   <children>
+      <HBox prefHeight="80.0" prefWidth="1280.0">
+         <children>
+            <Button fx:id="mainMenuBtn" mnemonicParsing="false" onAction="#backToMainMenu" text="Main Menu">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="25.0" />
+               </HBox.margin>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Cart">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="220.0" top="20.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox prefHeight="522.0" prefWidth="1280.0">
+         <children>
+            <TableView fx:id="cartTableView" prefHeight="482.0" prefWidth="439.0">
+               <columns>
+                  <TableColumn fx:id="cartColTitle" prefWidth="172.7999267578125" text="Title" />
+                  <TableColumn fx:id="cartColQuantity" prefWidth="138.4000244140625" text="Quantity" />
+               </columns>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </TableView>
+            <VBox prefHeight="482.0" prefWidth="252.0">
+               <children>
+                  <VBox prefHeight="89.0" prefWidth="252.0">
+                     <children>
+                        <Label text="Total Price" />
+                        <TextField fx:id="totalPriceTextField" prefHeight="26.0" prefWidth="214.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="162.0" prefWidth="252.0">
+                     <children>
+                        <Label text="Address" />
+                        <TextField fx:id="addressTextField" prefHeight="26.0" prefWidth="214.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Payment Method" />
+                        <Button fx:id="creditCardBtn" mnemonicParsing="false" onAction="#payWithCard" text="Credit Card">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="pointsBtn" mnemonicParsing="false" onAction="#payWithPoints" text="Loyalty Points">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <HBox>
+                           <children>
+                              <ChoiceBox fx:id="choiceBox" prefHeight="26.0" prefWidth="170.0" />
+                              <Button fx:id="pickupBtn" mnemonicParsing="false" onAction="#pickup" text="Pickup">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

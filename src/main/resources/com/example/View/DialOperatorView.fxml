@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="707.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Controller.DialOperatorController">
+   <children>
+      <HBox prefHeight="80.0" prefWidth="1280.0">
+         <children>
+            <Button fx:id="mainMenuBtn" mnemonicParsing="false" onAction="#exit" prefHeight="26.0" prefWidth="67.0" text="Exit">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="25.0" />
+               </HBox.margin>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search Some movies!">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="360.0" top="20.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="searchTextField" prefHeight="26.0" prefWidth="215.0" promptText="Leave it blank to search all movies">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </TextField>
+            <ChoiceBox fx:id="choiceBox" prefHeight="26.0" prefWidth="108.0">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </ChoiceBox>
+            <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#search" text="Search" />
+         </children>
+      </HBox>
+      <HBox prefHeight="522.0" prefWidth="1280.0">
+         <children>
+            <TableView fx:id="movieTableView" prefHeight="433.0" prefWidth="938.0">
+               <columns>
+                  <TableColumn fx:id="colMid" prefWidth="65.60003662109375" text="Movie ID" />
+                  <TableColumn fx:id="colTitle" prefWidth="158.39996337890625" text="Title" />
+                  <TableColumn fx:id="colGenre" text="Genre" />
+                  <TableColumn fx:id="colDirector" prefWidth="99.2000732421875" text="Director" />
+                  <TableColumn fx:id="colActor" prefWidth="223.199951171875" text="Actors" />
+                  <TableColumn fx:id="colQuantity" prefWidth="68.800048828125" text="Quantity" />
+                  <TableColumn fx:id="colDate" prefWidth="72.0" text="Date" />
+                  <TableColumn fx:id="colPrice" prefWidth="61.5999755859375" text="Price" />
+               </columns>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </TableView>
+            <VBox>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <children>
+                  <TableView fx:id="cartTableView" prefHeight="412.0" prefWidth="258.0">
+                     <columns>
+                        <TableColumn fx:id="cartColTitle" prefWidth="107.99999845027924" text="Title" />
+                        <TableColumn fx:id="cartColQuantity" prefWidth="70.40015411376953" text="Quantity" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label text="Address" />
+                              <TextField fx:id="addressTextField" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Button fx:id="submitBtn" mnemonicParsing="false" onAction="#submit" text="Submit">
+                           <HBox.margin>
+                              <Insets left="10.0" top="16.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
